@@ -1,0 +1,9 @@
+<header>
+  <div class="box">
+    {{#if auth}}
+      <a  href="/logout" class="logout">Выйти</a>
+      {{else}}
+      <a  class="auth" href="/login">Авторизоваться facebook</a>
+    {{/if}}
+  </div>
+</header>

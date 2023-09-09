@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+
+        <title>Node js Handlebars</title>
+        <style>
+            *{
+                color: whitesmoke;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+            }
+            body{
+                background-color: black;
+            }
+            header{
+                background: rgb(103, 0, 187);
+                height: 60px;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+            }
+            .auth{
+                padding: 8px;
+                margin-inline: 4px;
+                background-color: green;
+                border:none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .auth:hover{
+                background-color: rgb(12, 187, 12);
+            }
+            .logout{
+                padding: 8px;
+                margin-inline: 4px;
+                background-color: red;
+                border:none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .logout:hover{
+                background-color: rgb(216, 31, 31);
+            }
+            main{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 200px;
+                height: 100%;
+            }
+            .auth__btn{
+                margin-top: 8px;
+                padding: 8px;
+                margin: 12px;
+                color: white;
+                background: blue;
+            }
+            .login__box{
+                padding: 16px;
+                border-radius: 4px;
+                background-color: rgb(41, 39, 39);
+            }
+            .login__box h1{
+                margin-bottom: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        {{> header}}
+        {{{body}}}
+    </body>
+</html>
