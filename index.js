@@ -4,14 +4,21 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 const session = require('express-session');
 const handlebars = require('express-handlebars');
 const dotenv = require('dotenv');
+const path = require("path")
+const {fileURLToPath } = require("url")
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 dotenv.config();
 const app = express();
 
+
+
 app.engine(
     'handlebars',
-    handlebars.engine({ defaultLayout: 'main',partialsDir:"./views/partials"})
+    handlebars.engine({ defaultLayout: 'main',partialsDir:path.join(__dirname,"views/partials")})
 );
-app.set('views', 'views');
+app.set('views', path.join(__dirname, "views"));
 app.set('view engine', 'handlebars');
 
 
